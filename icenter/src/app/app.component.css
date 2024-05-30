@@ -1,0 +1,43 @@
+.text-gradient {
+  color: #000000; /* Color inicial del texto */
+  transition: color 0.5s ease; /* Transición de color al pasar el cursor */
+}
+
+.text-gradient:hover {
+  background-image: linear-gradient(to right, #AB0214, #F9F5F2, #182029, #255F80, #FFE1DD, #384C37);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.text-gradient2 {
+  color: #000000; /* Color inicial del texto */
+  transition: color 0.5s ease; /* Transición de color al pasar el cursor */
+}
+
+.text-gradient2:hover {
+  background-image: linear-gradient(to right, #ffffff, #cf2424);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-image {
+  max-width: 70%;
+  margin-top: -20px;
+  animation: slideInFromLeft 2s ease-out forwards; 
+  /* Agregar transición de opacidad */
+  transition: opacity 0.5s ease-in-out;
+}
