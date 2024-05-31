@@ -1,0 +1,151 @@
+
+<link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+<nav class="bg-white dark:bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-white">
+  <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="assets/logoICenter.png" class="h-16" alt="iCenter Logo">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">iCenter</span>
+    </a>
+    <div class="items-center justify-end w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse mt-0">
+        <li>
+          <a href="#inicio" class="text-gradient block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-black" aria-current="page">Inicio</a>
+        </li>
+        <li>
+          <a href="#especificaciones" class="text-gradient block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-black" aria-current="page">Especificaciones</a>
+        </li>
+        <li>
+          <a href="#tienda" class="text-gradient block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-black" aria-current="page">Nuestra Tienda</a>
+        </li>
+      </ul>
+      <!-- Botón para mostrar el grupo -->
+      <button (click)="mostrarGrupo()" class="ml-72 bg-transparent border border-blue-700 py-1 px-2 rounded-full text-sm text-blue-700 hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out">Mostrar Grupo</button>
+    </div>
+  </div>
+</nav>
+
+
+
+<div *ngIf="mostrarInformacionGrupo" class="flotante">
+  <div class="contenido-mensaje">
+    <h2 class="text-2xl font-semibold mb-4">Información del Grupo No.2</h2>
+    <div class="flex items-center mb-2">
+      <img src="assets/juanjo.jpg" alt="Avatar Integrante 1" class="h-10 w-10 rounded-full mr-2">
+      <p class="text-left"><strong>Integrante 1:</strong> Juan José Mayen Sandoval | 0900-24-3623</p>
+    </div>
+    <div class="flex items-center mb-2">
+      <img src="assets/brayan.png" alt="Avatar Integrante 2" class="h-10 w-10 rounded-full mr-2">
+      <p class="text-left"><strong>Integrante 2:</strong> Brayan Ismael Cifuentes Silvestre | 0900-24-1814</p>
+    </div>
+    <div class="flex items-center mb-2">
+      <img src="assets/frinda.png" alt="Avatar Integrante 3" class="h-10 w-10 rounded-full mr-2">
+      <p class="text-left"><strong>Integrante 3:</strong> Frinda Lisseth Mendez Petet | 0900-24-25504</p>
+    </div>
+    <!-- Agrega más información del grupo aquí -->
+    <button (click)="cerrarMensaje()" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-600">Cerrar</button>
+  </div>
+</div>
+
+
+
+
+
+  <div id="inicio" class="p-32 bg-gray-100">
+    <div class="text-center mb-8">
+      <h2 class="text-6xl font-semibold mb-4">
+        <span class="text-gradient">iPhone 13</span>
+      </h2>
+      <img src="assets/file.png" alt="iPhones 13" class="mx-auto mb-2 animated-image">
+      <p class="mb-4 text-lg ">El iPhone 13 es el último smartphone de Apple, con características impresionantes que lo convierten en una opción increíble para usuarios exigentes.</p>
+      <h3 class="text-xl font-semibold mb-2">Detalles del Producto:</h3>
+      <ul class="mb-4 text-lg ">
+        <li>Pantalla Super Retina XDR de 6.1 pulgadas</li>
+        <li>Chip A15 Bionic con Neural Engine de última generación</li>
+        <li>Cámara dual de 12 MP con modo Noche y Modo Retrato</li>
+        <li>Disponible en capacidades de almacenamiento de 256GB </li>
+        <li>Resistente al agua y al polvo (IP68)</li>
+      </ul>
+      <p class="mb-4 font-bold text-3xl">Precio de Venta: Q7244.05</p>
+    </div>
+  </div>
+
+
+
+<div id="especificaciones" class="p-8 bg-white">
+  <h2 class="text-center text-6xl font-semibold mb-4 text-gradient2">Especificaciones iPhone 13</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Especificación 1: Dimensiones -->
+    <div class="flex items-center justify-center mb-12 ml-20">
+      <img src="assets/dimensionTamañoYPeso.jpg" alt="Dimensiones, Tamaño y Peso" class="h-48 w-auto mr-4">
+      <ul class="text-center md:text-left">
+        <li><strong>Dimensiones:</strong> 146.7 x 71.5 x 7.7 mm</li>
+        <li><strong>Peso:</strong> 174 gramos</li>
+      </ul>
+    </div>
+
+    <!-- Especificación 2: Pantalla --> 
+    <div class="flex items-center justify-center mt-48 mr-20">
+      <ul class="text-center md:text-left mr-4">
+        <li><strong>Pantalla:</strong> Super Retina XDR OLED, 6.1 pulgadas</li>
+        <li class="text-right">Pantalla HDR</li>
+      </ul>
+      <img src="assets/tamañoPantalla.jpg" alt="Tamaño de Pantalla" class="h-80 w-auto">
+    </div>
+
+    <!-- Especificación 3: Procesador -->
+    <div class="flex items-center justify-center mt-12">
+      <img src="assets/procesador.jpg" alt="Procesador" class="h-44 w-auto mr-4">
+      <ul class="text-center md:text-left">
+        <li><strong>Procesador:</strong> Chip A15 Bionic</li>
+        <li><strong>Memoria RAM:</strong> 6GB</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Otras Especificaciones -->
+  <h3 class="text-4xl text-center font-semibold mt-8 mb-4">Otras Especificaciones</h3>
+  <ul class="flex flex-col justify-center items-center text-center text-xl md:text-left leading-9">
+    <li><i class="fa-brands fa-apple mr-4"></i><strong>Sistema Operativo:</strong> iOS 15</li>
+    <li><i class="fa-solid fa-camera mr-4"></i><strong>Cámaras:</strong> Cámara dual de 12 MP (principal y ultra gran angular)</li>
+    <li><i class="fa-solid fa-battery-full mr-4"></i><strong>Batería:</strong> Hasta 19 horas de reproducción de video</li>
+    <li><i class="fa-solid fa-wifi mr-4"></i><strong>Conectividad:</strong> 5G, Wi-Fi 6, Bluetooth 5.0</li>
+    <li><i class="fa-solid fa-droplet mr-4"></i><strong>Resistencia al agua y al polvo:</strong> IP68</li>
+    <li><i class="fa-solid fa-palette mr-4"></i><strong>Colores disponibles:</strong> Negro, Blanco, Azul, Rojo, Verde</li>
+  </ul>  
+</div>
+
+
+
+<div id="tienda" class="p-8 bg-gray-300">
+  <h2 class="text-center text-6xl font-semibold mb-4 text-gradient2">Nuestra Tienda</h2>
+  <div class="max-w-screen-lg mx-auto">
+    <p class="mb-8 text-lg text-center">
+      Nuestra tienda física que será el principal punto de venta, esta ubicada en la ciudad de Guatemala, 
+      en la 12 calle, zona 14. Esta elección se tomo por la densidad poblacional y el alto tráfico de personas, 
+      lo que nos brinda mayor oportunidades de venta.
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-center items-center mb-8 space-x-8">
+      <!-- Imagen principal representativa de la tienda -->
+      <div class="md:w-1/2 mb-4 md:mb-0 mr-12">
+        <img src="assets/imagenLocal.png" alt="Imagen del Local" class="w-full h-auto rounded-lg shadow-md">
+      </div>
+      
+      <!-- Mapa de Google Maps -->
+      <div class="md:w-1/2">
+        <div class="w-full h-96 rounded-lg shadow-md overflow-hidden">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.123456789012!2d-90.51500000000001!3d14.604000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a1a123456789%3A0x123456789abcdef!2s12%20Calle%20Zona%2014%2C%20Ciudad%20de%20Guatemala%2C%20Guatemala!5e0!3m2!1sen!2s!4v1234567890123" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
