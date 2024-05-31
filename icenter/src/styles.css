@@ -7,3 +7,9 @@ body{
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
+
+html {
+    scroll-behavior: smooth;
+    /* La transición controlará la velocidad del desplazamiento */
+    scroll-behavior: 500ms;
+  }
